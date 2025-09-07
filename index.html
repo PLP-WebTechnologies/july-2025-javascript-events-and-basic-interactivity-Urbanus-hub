@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web Page Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body.dark-mode {
+        background: #222;
+        color: #eee;
+      }
+      .faq-content {
+        display: none;
+      }
+      .faq.open .faq-content {
+        display: block;
+      }
+      .error {
+        color: red;
+        font-size: 0.9em;
+      }
+      .success {
+        color: green;
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Interactive Web Pages!</h1>
+    <button id="toggle-mode">Toggle Light/Dark Mode</button>
+    <hr />
+    <section>
+      <h2>Counter Game</h2>
+      <button id="counter-btn">Count: <span id="count">0</span></button>
+    </section>
+    <hr />
+    <section>
+      <h2>FAQ</h2>
+      <div class="faq">
+        <button class="faq-question">What is JavaScript?</button>
+        <div class="faq-content">
+          JavaScript is a programming language for the web!
+        </div>
+      </div>
+      <div class="faq">
+        <button class="faq-question">Why use events?</button>
+        <div class="faq-content">Events let you respond to user actions.</div>
+      </div>
+    </section>
+    <hr />
+    <section>
+      <h2>Sign Up Form</h2>
+      <form id="signup-form" novalidate>
+        <label>Name: <input type="text" id="name" required /></label>
+        <span class="error" id="name-error"></span><br />
+        <label>Email: <input type="email" id="email" required /></label>
+        <span class="error" id="email-error"></span><br />
+        <label
+          >Password: <input type="password" id="password" required
+        /></label>
+        <span class="error" id="password-error"></span><br />
+        <button type="submit">Sign Up</button>
+        <div id="form-success" class="success"></div>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
